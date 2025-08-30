@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Radharani 🎉</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <!-- Characters -->
+  <img src="Birthday Girl.png" class="character radha" alt="Radharani">
+  <img src="little krishna.png" class="character krishna" alt="Little Krishna">
+
+  <!-- Center Message + Cake -->
+  <div class="container">
+    <h1>🎉 Happy Birthday Radharani 🎉</h1>
+      <div class="candle">
+        <div class="flame"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Balloons -->
+  <div class="balloon" style="left: 15%; background: rgb(50, 2, 65); animation-delay: 0s;"></div>
+  <div class="balloon" style="left: 40%; background: rgb(35, 102, 124); animation-delay: 1s;"></div>
+  <div class="balloon" style="left: 65%; background: rgb(21, 95, 21); animation-delay: 2s;"></div>
+  <div class="balloon" style="left: 85%; background: yellow; animation-delay: 3s;"></div>
+
+  <script>
+    // Regular confetti rain
+    setInterval(() => {
+      confetti({ particleCount: 80, spread: 70, origin: { y: 0.6 } });
+    }, 3000);
+
+    // Burst confetti when they meet (after 5s)
+    setTimeout(() => {
+      confetti({
+        particleCount: 200,
+        spread: 120,
+        origin: { y: 0.7 }
+      });
+    }, 5000);
+  </script>
+
+</body>
+</html>
